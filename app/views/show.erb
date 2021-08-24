@@ -1,0 +1,14 @@
+<!-- This view just prints everything out-->
+<!--This is also where a user would have the option to delete something out -->
+
+Name: <%= @recipe.name%>
+Ingredients: <%= @recipe.ingredients%>
+Cook Time: <%= @recipe.cook_time%>
+
+<!--Create a POST form to detele something out-->
+<!--This will be a standard delete for all future labs just change out the action -->
+<form method="POST" action="/recipes/<%=@recipe.id%>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete">
+</form>
+
